@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Currículo — Vitale</title>
+  <meta name="description" content="Modelo de currículo limpo e profissional — Vitale">
+  <style>
+    /* ---------- Variáveis de cor ---------- */
+    :root{
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --accent: #264653; /* azul-escuro */
+      --accent-2: #2a9d8f; /* turquesa */
+      --muted: #6b7280;
+      --glass: rgba(255,255,255,0.6);
+    }
+
+    /* ---------- Reset simples ---------- */n
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, #eef2f7 0%, var(--bg) 100%);
+      color: #111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px;
+    }
+
+    /* ---------- Container ---------- */
+    .resume{
+      max-width:980px;
+      margin:0 auto;
+      background:var(--card);
+      border-radius:14px;
+      box-shadow: 0 10px 30px rgba(20,24,40,0.08);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:0;
+    }
+
+    /* ---------- Sidebar (esquerda) ---------- */
+    .side{
+      background:linear-gradient(180deg, rgba(42,157,143,0.06), rgba(38,70,83,0.03));
+      padding:28px;
+      border-right:1px solid rgba(15,23,42,0.03);
+      min-height:480px;
+    }
+
+        /* ---------- Button ---------- */
+    .btn {
+      display: inline-block;
+      padding: 8px 14px;
+      background: #10b981;
+      color: white;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      margin-top:12px;
+      text-align:center;
+    }
+
+
+    .photo{
+      width:120px;height:120px;border-radius:12px;overflow:hidden;margin:0 auto 18px;box-shadow:0 6px 18px rgba(10,10,10,0.06);      
+      display:flex;justify-content:center;color:white;font-weight:700;font-size:28px;
+    }
+
+    .name{text-align:center;margin-bottom:8px;font-size:20px;font-weight:700;color:var(--accent)}
+    .job{ text-align:center;color:var(--muted);font-size:13px;margin-bottom:18px }
+
+    .contact, .skills, .lang{margin-top:12px}
+    .section-title{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--accent);font-size:12px;margin-bottom:10px}
+    .contact p, .skills li, .lang li{font-size:13px;color:#374151;margin:margin:0 0 8px 0}
+    .contact p{display:flex;gap:8px;align-items:center}
+
+    .skill-bar{background:rgba(0,0,0,0.06);border-radius:999px;height:10px;overflow:hidden}
+    .skill-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent-2),var(--accent));}
+    .skill-row{display:flex;justify-content:space-between;margin-bottom:8px;align-items:center}
+
+    /* ---------- Main (direita) ---------- */
+    .main{
+      padding:30px 36px;
+    }
+
+    header.main-header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+    .title{font-size:28px;font-weight:800;color:#0f172a}
+    .summary{color:var(--muted);margin-top:8px;line-height:1.5}
+
+    .section{margin-top:22px}
+    .item{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(250,250,252,0.6), rgba(255,255,255,0.4));margin-bottom:12px;border:1px solid rgba(15,23,42,0.03)}
+
+    .item h4{margin:0;font-size:16px;color:var(--accent)}
+    .meta{display:flex;gap:10px;color:var(--muted);font-size:13px;margin-top:6px}
+    .desc{margin-top:8px;color:#263238;font-size:14px;line-height:1.5}
+
+    /* ---------- Two-column list for quick facts ---------- */
+    .two-col{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+
+    /* ---------- Print styles ---------- */
+    @media print{
+      body{padding:0;background:white}
+      .resume{box-shadow:none;border-radius:0}
+    }
+
+    /* ---------- Mobile ---------- */
+    @media (max-width:840px){
+      body{padding:18px}
+      .resume{grid-template-columns:1fr;}
+      .side{order:2;border-right:none;border-top:1px solid rgba(15,23,42,0.03)}
+      .main{order:1}
+    }
+
+
+  </style>
+</head>
+<body>
+
+<div class="resume">
+  <!-- SIDEBAR -->
+   
+  <aside class="side">
+    <div class="photo"  alt="Minha imagem" aria-hidden="true"><img src="https://media.licdn.com/dms/image/v2/C4D03AQGukzulLdoVaQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1547080912402?e=1758153600&v=beta&t=0zxIxymHlwhdbIslob5SGtOR1nPG-9YAe1xi1aYFXLU"  /></div>
+    <div class="name">Gabriel Cabral</div>
+    <div class="job">Desenvolvedor Full Stack</div>
+
+    <div class="contact">
+      <div class="section-title">Contato</div>
+      <p>📧 <a href="mailto:seunome@exemplo.com">gabrielcabralcurriculo@gmail.com</a></p>
+      <p>📞 +55 (16) 991627275</p>
+      <p>🌐 <a href="https://www.linkedin.com/in/gabriel-andrade-cabral-551ab4178/">linkedin.com/in/GabrielCabral</a></p>
+      <p>📍 Jundiaí, Brasil</p>
+    </div>
+
+    <div class="skills">
+      <div class="section-title">Habilidades</div>
+      <ul style="list-style:none;padding:0;margin:0">
+        <li class="skill-row"><span>JavaScript</span></li> 
+        <!-- <li class="skill-bar" aria-hidden="true"><div class="skill-fill" style="width:90%"></div></li> -->
+
+        <li class="skill-row"><span>C++</span></li>
+        <!-- <li class="skill-bar" aria-hidden="true"><div class="skill-fill" style="width:85%"></div></li> -->
+
+        <li class="skill-row"><span>React</span></li>
+        <!-- <li class="skill-bar" aria-hidden="true"><div class="skill-fill" style="width:80%"></div></li> -->
+
+        <li class="skill-row"><span>Flutter</span></li>
+        <!-- <li class="skill-bar" aria-hidden="true"><div class="skill-fill" style="width:75%"></div></li> -->
+      </ul>
+    </div>
+
+    <div class="lang">
+      <div class="section-title">Idiomas</div>
+      <ul style="list-style:none;padding:0;margin:0">
+        <li>Português — Nativo</li>
+        <li>Inglês — Intermediário</li>    
+      </ul>
+    </div>
+
+    <div style="margin-top:18px">
+      <div class="section-title">Links úteis</div>
+      <ul style="list-style:none;padding:0;margin:0;color:var(--muted)">        
+        <p>Github: <a href="https://github.com/GaboDevs0101">Github.com/GabrielCabral</a></p>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <header class="main-header">
+      <div>
+        <div class="title">Vitale — Currículo</div>
+        <div class="summary">Profissional com 7 anos de experiência em desenvolvimento Full-Stack, voltado para licitações de prefeituras,
+            e controle de sua frota de veículos.
+        </div>
+      </div>
+      <div style="text-align:right;color:var(--muted)">
+        <div style="font-weight:700;color:var(--accent)">Cargo pretendido</div>
+        <div>Desenvolvedor Full Stack</div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-title">Experiência</div>
+      <article class="item">
+        <h4>SMARAPD — Desenvolvedor Pleno</h4>
+        <div class="meta">Jun 2020 — Atual • Home-Office</div>
+        <p class="desc"> Desenvolvimento de tecnologias voltadas a licitações de prefeituras, e o controle de suas frotas de veículos.
+        </p>
+      </article>
+
+      <article class="item">
+        <h4> Prime Consultoria LTDA — Estágiario </h4>
+        <div class="meta">Fev 2019 — Jan 2020 • Ribeirão Preto, SP</div>
+        <p class="desc"> Desenvolvimento de ERP
+        </p>
+      </article>
+
+      <article class="item">
+        <h4> GlobalDox — Estágiario </h4>
+        <div class="meta">Jun 2018 — Dez 2018 • Ribeirão Preto, SP</div>
+        <p class="desc"> Suporte técnico ao cliente
+        </p>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Formação</div>
+      <div class="item">
+        <h4>Bacharel em Ciência da Computação — Universidade Paulista</h4>
+        <div class="meta">2018 — 2021</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Certificações</div>
+      <div class="item">
+        <h4>Certificado Fundamentos de Power BI — Instituto Federal de Educação - Abril 2023</h4>
+        <div class="meta">2022</div>
+      </div>
+    </section>
+    
+    
+<footer style="margin-top:22px;color:var(--muted);font-size:13px; text-align:center;">
+  <div>Disponível para mudança imediata • Referências mediante solicitação</div>
+  <button id="exportPdf" class="btn">Gerar PDF da tela inteira</button>
+</footer>
+  </main>
+  
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script>
+    document.getElementById('exportPdf').addEventListener('click', function () {
+      // elemento que queremos capturar: toda a página (documentElement) ou um container específico
+      // para capturar realmente toda a tela use document.documentElement
+      const element = document.querySelector('.resume');
+      const button = this;
+      button.style.display = 'none'; // Esconde o botão
+
+
+      // configurações recomendadas
+      const opt = {
+        margin:       [10, 10, 10, 10], // top, left, bottom, right em pts por padrão
+        filename:     'pagina-inteira.pdf',
+        image:        { type: 'jpeg', quality: 0.95 },
+        html2canvas:  {
+          scale: 2,                   // melhora a qualidade (mas aumenta memória)
+          useCORS: true,              // liberar cross-origin images (se host suportar)
+          windowWidth: document.documentElement.scrollWidth,
+          windowHeight: document.documentElement.scrollHeight,
+          scrollX: 0,
+          scrollY: 0,
+        },
+        jsPDF:        { unit: 'pt', format: 'a4', orientation: 'portrait' }
+      };
+
+      // mostra um pequeno feedback (opcional)
+      this.disabled = true;
+      this.textContent = 'Gerando PDF...';
+
+      // gera e baixa
+      html2pdf().set(opt).from(element).save().finally(() => {
+        this.disabled = false;
+        this.textContent = 'Gerar PDF da tela inteira';
+        button.style.display = '';
+      });
+    });
+  </script>
+</body>
+</html>
